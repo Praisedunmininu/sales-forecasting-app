@@ -11,7 +11,7 @@ st.title("📈 Sales Forecasting Demo (Prophet)")
 
 @st.cache_data
 def load_data():
-    csv_path = Path("data/train.csv")
+    csv_path = Path("data/mini_train.csv") # <- using slice data due to huge data load
     df = pd.read_csv(csv_path, parse_dates=["date"])
     return df
 
